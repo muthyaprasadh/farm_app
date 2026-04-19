@@ -27,13 +27,10 @@ class_names = [
     'Tomato__Tomato_mosaic_virus',
     'Tomato_healthy'
 ]
-
-# AWS clients
-s3 = boto3.client('s3')
-polly = boto3.client('polly')
-translate = boto3.client('translate')
-sns = boto3.client('sns')
-
+s3 = boto3.client('s3', region_name='ap-south-1')
+polly = boto3.client('polly', region_name='ap-south-1')
+translate = boto3.client('translate', region_name='ap-south-1')
+sns = boto3.client('sns', region_name='ap-south-1')
 BUCKET = "farm-disease-images"
 
 # ---------- FUNCTIONS ----------
